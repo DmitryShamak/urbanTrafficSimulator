@@ -1,0 +1,27 @@
+{
+  "name": "trafficSimulator",
+  "homepage": "https://github.com/DmitryShamak/urbanTrafficSimulator",
+  "authors": [
+    "DmitryShamak <hellkitedmitry@mail.ru>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "jquery": "~2.2.4",
+    "font-awesome": "~4.6.3",
+    "lodash": "~4.13.1",
+    "moment": "~2.13.0",
+    "react": "~15.1.0",
+    "q": "~2.0.2"
+  }
+}
