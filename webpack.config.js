@@ -8,15 +8,14 @@ var CleanWebpackPlugin = require('clean-webpack-plugin');
 var css = require("!css!sass!./file.scss");
 
 module.exports = {
-    entry:   "./app/index.html",
+    entry:   "./app/js/app.js",
     output:  {
         path:     __dirname + "/dist",
-        filename: "index.html"
+        filename: "bundle.js"
     },
     module:  {
         loaders: [
-            { test: /\.css$/, loader: "style-loader!css-loader" },
-            {test: /\.(woff|svg|ttf|eot)([\?]?.*)$/, loader: "file-loader?name=[name].[ext]"}
+            {  test: /\.js/, loader: 'babel', exclue: /(node_modules|bower_components)/ }
         ]
     },
     plugins: [
@@ -32,8 +31,6 @@ module.exports = {
         }),
         new CopyWebpackPlugin([{
             from: './app/index.html', to: 'index.html'
-        }, {
-            from: './app/js/app.js', to: 'app.js'
         }])
     ]
 };

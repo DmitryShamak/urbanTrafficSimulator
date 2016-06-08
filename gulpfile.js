@@ -30,11 +30,6 @@ var scriptsSrc = [
 ];
 gulp.task("scripts", function() {
     return gulp.src(scriptsSrc)
-        .pipe(concat('app.js'))
-        .pipe(gulp.dest('dist/js'))
-        .on('error', util.log)
-        .pipe(rename({suffix: '.min'}))
-        .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
         .pipe(notify({ message: 'Scripts task complete' }));
 });
